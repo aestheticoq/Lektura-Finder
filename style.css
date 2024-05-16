@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0 auto;
+    padding: 0 1vmin;
+    overflow-x: hidden;
+}
+
+.baner{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 5vmin;
+    margin-bottom: 5vmin;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: .4vmin solid rgb(224, 94, 7);
+}
+
+.footer{
+    padding: 3vmin;
+    border-top: .4vmin solid rgb(255, 255, 255);
+    border-bottom: .4vmin solid rgb(255, 255, 255);
+    background-color: rgb(224, 94, 7);
+    color: #fff;
+    font-size: 1.75vmin;
+    text-align: right;
+    left: 0;
+    bottom: 0;
+    clear: both;
+    width: 100%;
+}
+
+.baner a{
+    color: #000;
+    text-decoration: none;
+}
+
+.root{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 6vmin;
+    margin-top: 18vmax;
+}
+
+@media screen and (max-width: 1050px) {
+    .root{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .root{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .root{
+        grid-template-columns: 1fr;
+    }
+
+    .root div div {
+        font-size: 3.25vmin !important;
+    }
+
+    .root div section {
+        font-size: 4vmin !important;
+    }
+}
+
+.root div{
+    background-color: #ffffff;
+    box-shadow: #444444 .5vmin .5vmin .4vmin;
+    width: 100%;
+    border-radius: 1vmin;
+    padding: 1vmin;
+    border: solid rgb(224, 94, 7) .5vmin;
+}
+
+.root div section{
+    font-size: 1.75vmin;
+    font-weight: bold;
+    padding: 1vmin;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.root div div{
+    font-size: 1.5vmin;
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    gap: .5vh;
+    border: none;
+}
+
+.root div img{
+    width: 100%;
+    aspect-ratio: 360 / 450;
+    border-top-left-radius: .5vmin;
+    border-top-right-radius: .5vmin;
+}
+
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: rgb(224, 94, 7);
+  padding-right: 40px;
+  color:#000000;
+}
+
+.input-search::placeholder{
+  color:rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:rgb(224, 94, 7);
+  background-color:white;
+  border: .4vmin solid rgb(224, 94, 7);
+  pointer-events: painted;
+  margin-top: -.5vmin;
+  transition: .2s ease-in;
+}
+
+.btn-search:hover{
+    transition: .2s ease-out;
+    margin-top: 0;
+    background-color:rgb(224, 94, 7);
+    color:white;
+}
+
+.btn-search:focus:hover{
+    transition: .2s ease-out;
+    margin-top: -.5vmin;
+    background-color:white;
+    color:rgb(224, 94, 7);
+}
+
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:.3vmin solid rgb(224, 94, 7);
+  margin-top: .3vmin;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus{
+  width: 300px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom:.3vmin solid rgb(224, 94, 7);
+  margin-top: .3vmin;
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
