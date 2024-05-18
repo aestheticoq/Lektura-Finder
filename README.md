@@ -4,6 +4,7 @@
 ### Easy Api Site 
 - html
 - css
+- scss
 - js
 - api
 
